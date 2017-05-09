@@ -1,0 +1,73 @@
+{
+  "name": "flipchain",
+  "version": "0.6.1",
+  "description": "core chaining library, heavily based on [webpack-chain](https://github.com/mozilla-rpweb/webpack-chain)",
+  "main": "./dist/index.js",
+  "web": "./dist/index.js",
+  "module": "./src/index.js",
+  "scripts": {
+    "expose": "node ./node_modules/easy-npm-files/exposer.js --del=true",
+    "clean": "node ./node_modules/easy-npm-files/exposer.js --dir='dist' --copy=true",
+    "strip": "flow-remove-types src/ --pretty --all --out-dir dist/",
+    "strip:rm": "rm -f -r dist/",
+    "test": "npm run strip && ava --verbose",
+    "watch": "babel src/ --out-dir dist/ --watch"
+  },
+  "optional-dependencies": {
+    "easy-npm-files": "*"
+  },
+  "dependencies": {
+    "arr-to-obj": "*",
+    "deepmerge": "^1.3.2",
+    "inspector-gadget": "*",
+    "likeaboss": "*"
+  },
+  "devDependencies": {
+    "easy-npm-files": "*",
+    "ava": "*",
+    "flow-remove-types": "*"
+  },
+  "keywords": [
+    "fluent",
+    "chain",
+    "fliphub-chain",
+    "webpack-chain",
+    "fusebox-chain",
+    "webpack",
+    "fliphub",
+    "flipbox",
+    "fusebox"
+  ],
+  "license": "MIT",
+  "author": "James <aretecode@gmail.com>",
+  "homepage": "https://github.com/fliphub/flipchain#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fliphub/flipchain.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fliphub/flipchain/issues"
+  },
+  "types": "./declarations",
+  "files": [
+    "index.js",
+    "Chainable.js",
+    "ChainedChain.js",
+    "ChainedMap.js",
+    "ChainedMapExtendable.js",
+    "ChainedMapTill.js",
+    "ChainedSet.js",
+    "./Chainable.js",
+    "./ChainedChain.js",
+    "./ChainedMap.js",
+    "./ChainedMapExtendable.js",
+    "./ChainedMapTill.js",
+    "./ChainedSet.js",
+    "./Chainable.js",
+    "./ChainedChain.js",
+    "./ChainedMap.js",
+    "./ChainedMapExtendable.js",
+    "./ChainedMapTill.js",
+    "./ChainedSet.js"
+  ]
+}
