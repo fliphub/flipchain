@@ -1,0 +1,5 @@
+- better more reusable rehydrating, allow a mapper fn
+- add ava tests
+- add more examples linking to the libs already using it
+- add better merging than deepmerge specifically for arrays + strings
+- abstract the chain up and chain factories into here to allow usage without .end
