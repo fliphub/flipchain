@@ -40,7 +40,7 @@ class ChainedMapExtendable extends ChainedMap {
    * @return {Chainable}
    */
   debug(should = true) {
-    return this.set('debug', should)
+    return this.store.set('debug', should)
   }
 
   /**

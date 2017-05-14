@@ -1,19 +1,27 @@
 // @flow
 
-const {inspectorGadget} = require('inspector-gadget')
+const isNode =
+  typeof process === 'object' &&
+  typeof process.release === 'object' &&
+  process.release.name === 'node'
 
 /**
  * @type {Chainable}
  * @property {Chainable | any} parent
  */
 class Chainable {
-
   /**
    * @param {Chainable | any} parent
    */
   constructor(parent: any) {
     this.parent = parent
-    this.inspect = inspectorGadget(this, ['parent', 'workflow'])
+
+    if (isNode) {
+      this.inspect = require('inspector-gadget').inspectorGadget(this, [
+        'parent',
+        'workflow',
+      ])
+    }
   }
 
   /**
